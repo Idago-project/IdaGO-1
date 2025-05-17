@@ -1,0 +1,507 @@
+/* Estilos generales */
+.search-page {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  width: 100%;
+  margin: 80px auto 20px;
+}
+
+.search-page .container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 24px;
+  margin: 0 auto;
+}
+
+.search-page #header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.search-page #header h1 {
+  font-size: 24px;
+  color: #FF6F61; /* Color primario */
+  font-weight: 700;
+}
+
+.search-page #booking {
+  margin-top: 24px;
+}
+
+.search-page #booking h2 {
+  font-size: 24px;
+  color: #FF6F61; /* Color primario */
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.search-page .timer {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4CAF50; /* Color secundario */
+  margin-bottom: 24px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-page .route {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 10px; /* Reducimos el padding */
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px; /* Reducimos el margen inferior */
+}
+
+.search-page .route p {
+  margin: 5px 0; /* Reducimos el margen entre los párrafos */
+  font-size: 16px;
+}
+
+.search-page .trips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px; /* Espacio entre las tarjetas de autobuses */
+  margin-top: 24px;
+}
+
+.search-page .trip {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  margin-bottom: 16px;
+  flex: 1 1 calc(50% - 24px); /* Dos columnas */
+}
+
+.search-page .trip:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.search-page .trip p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.search-page .trip .price {
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+.search-page .trip .price.internet {
+  color: #4CAF50; /* Color secundario */
+  font-weight: bold;
+}
+
+.search-page .trip .strike {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.search-page .stops-list {
+  list-style-type: disc;
+  margin-left: 16px;
+  padding-left: 8px;
+  text-align: left;
+}
+
+.search-page .stops-list li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.search-page .select-btn {
+  background-color: #FF6F61; /* Color primario */
+  color: white;
+  border: none;
+  padding: 10px 20px; /* Ajusta el padding para un tamaño más compacto */
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  width: auto; /* Cambia a "auto" para que el botón no ocupe todo el ancho */
+  margin-top: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block; /* Para que el botón no ocupe toda la línea */
+}
+
+.search-page .select-btn:hover {
+  background-color: #4CAF50; /* Color secundario */
+  transform: scale(1.02);
+}
+
+.search-page .login-options {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  margin: 24px auto;
+  text-align: center;
+}
+
+.search-page .login-options h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #FF6F61; /* Color primario */
+}
+
+.search-page .login-options button {
+  background-color: #FF6F61; /* Color primario */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin: 8px 0;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-page .login-options button:hover {
+  background-color: #4CAF50; /* Color secundario */
+  transform: scale(1.02);
+}
+
+.search-page .login-form {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  margin: 24px auto;
+  text-align: left;
+}
+
+.search-page .login-form h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #FF6F61; /* Color primario */
+  text-align: center;
+}
+
+.search-page .login-form label {
+  display: block;
+  margin: 8px 0 5px;
+  font-weight: 500;
+  color: #333;
+}
+
+.search-page .login-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.search-page .login-form input:focus {
+  box-shadow: 0px 0px 8px rgba(255, 111, 97, 0.4); /* Naranja */
+  outline: none;
+  border-color: #FF6F61; /* Color primario */
+}
+.search-page .purchase-form {
+  background: rgba(255, 255, 255, 0.95); /* Fondo blanco */
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  max-width: 700px;
+  width: 100%;
+  margin: 24px auto;
+  text-align: left;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.search-page .form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.search-page .summary {
+  background: rgba(245, 245, 245, 0.9); /* Fondo gris claro */
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+}
+
+.search-page .summary h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #333; /* Texto oscuro */
+  text-align: center;
+}
+
+.search-page .summary p {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #555; /* Texto gris oscuro */
+  line-height: 1.5;
+}
+
+.search-page .form-group {
+  margin-bottom: 16px;
+}
+
+.search-page .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+  font-size: 14px;
+}
+
+.search-page .form-group input,
+.search-page .form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd; /* Borde gris claro */
+  border-radius: 8px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  transition: border-color 0.3s ease;
+}
+
+.search-page .form-group input:focus,
+.search-page .form-group select:focus {
+  border-color: #888; /* Borde gris oscuro al enfocar */
+  outline: none;
+}
+
+.search-page .form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.search-page .form-row .form-group {
+  flex: 1;
+}
+
+.search-page .seat-map-container {
+  margin-top: 16px;
+  background: rgba(245, 245, 245, 0.9); /* Fondo gris claro */
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-page .seat-map-container h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #333;
+  text-align: center;
+}
+
+.search-page .seats {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  justify-content: center;
+}
+
+.search-page .seat {
+  background-color: #f0f0f0; /* Fondo gris claro */
+  color: #333;
+  border: 1px solid #ddd; /* Borde gris claro */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-page .seat:hover {
+  background-color: #e0e0e0; /* Gris un poco más oscuro al hacer hover */
+  transform: scale(1.05);
+}
+
+.search-page .seat.selected {
+  background-color: #333; /* Fondo oscuro para asiento seleccionado */
+  color: #fff; /* Texto blanco */
+}
+
+.search-page .confirm-button {
+  background-color: #333; /* Fondo oscuro */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-page .confirm-button:hover {
+  background-color: #555; /* Gris más claro al hacer hover */
+  transform: scale(1.02);
+}
+
+/* Estilo minimalista para el botón de selección de asientos */
+.search-page .boton {
+  background-color: #333; /* Fondo oscuro */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-page .boton:hover {
+  background-color: #555; /* Gris más claro al hacer hover */
+  transform: translateY(-2px);
+}
+
+.search-page .boton:active {
+  transform: translateY(0);
+}
+.search-page #ticket {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  margin: 24px auto;
+  text-align: left;
+}
+
+.search-page #ticket h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #FF6F61; /* Color primario */
+  text-align: center;
+}
+
+.search-page #ticket p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.search-page #ticket strong {
+  color: #333;
+}
+
+.search-page #ticket button {
+  background-color: #FF6F61; /* Color primario */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-page #ticket button:hover {
+  background-color: #4CAF50; /* Color secundario */
+  transform: scale(1.02);
+}
+
+.search-page .success-message {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+  padding: 16px 24px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  font-weight: 500;
+  z-index: 1000;
+  animation: slideIn 0.5s ease-out, fadeOut 0.5s ease-in 4.5s forwards;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-page .success-message::before {
+  content: '✔️';
+  font-size: 24px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+  .search-page {
+    padding: 16px;
+    margin: 80px 8px 8px;
+  }
+
+  .search-page .trip {
+    padding: 8px;
+  }
+
+  .search-page .button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .search-page .seat {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .search-page .success-message {
+    top: 8px;
+    right: 8px;
+    left: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+    text-align: center;
+  }
+}

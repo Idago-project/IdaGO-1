@@ -1,0 +1,708 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --primary-color: #10235c;
+    --primary-color-dark: #0f172a;
+    --text-dark: #0d101a;
+    --text-light: #64748b;
+    --extra-light: #f1f5f9;
+    --white: #ffffff;
+    --max-width: 1200px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.header {
+    width: 100%;
+    height: auto; /* Ajusta la altura según sea necesario */
+    overflow: hidden; /* Evita que la imagen se desborde */
+  }
+  
+  .header__image {
+    width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina espacios no deseados debajo de la imagen */
+  }
+
+.section__container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+}
+
+.section__header {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 3rem;
+    color: var(--text-dark);
+}
+
+.btn {
+    padding: .75rem 2rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--primary-color-dark);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: flex;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* Estilos generales para la NavBar */
+.nav {
+    position: fixed; /* Fija la NavBar en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background-color: #ffffff83; /* Asegura que la NavBar esté por encima de otros elementos */
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* Transición suave */
+  }
+  
+  .nav-scrolled {
+    background-color: rgba(255, 255, 255, 0.407); /* Fondo blanco con transparencia */
+    backdrop-filter: blur(5px); /* Efecto de desenfoque */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  /* Estilos para el logotipo */
+  .nav_logo img.logo {
+    height: 40px; /* Ajusta el tamaño según sea necesario */
+    width: auto; /* Mantiene la proporción de la imagen */
+  }
+  
+  /* Estilos para los enlaces */
+  .nav_links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Espaciado entre enlaces */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav_links .link a {
+    text-decoration: none;
+    color: #000000; /* Color del texto */
+    font-weight: 500;
+    transition: color 0.3s ease; /* Transición suave al hacer hover */
+  }
+  
+  .nav_links .link a:hover {
+    color: #007bff; /* Cambia el color al hacer hover */
+  }
+  
+  /* Estilos para el botón de contacto */
+  .btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px; /* Bordes completamente redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3; /* Cambia el color del botón al hacer hover */
+    transform: translateY(-2px); /* Efecto de elevación */
+  }
+/* Apartado de comprar boleto */
+/* Estilos específicos para el BookingForm */
+.booking-form__container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form__container h2 {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.booking-form__nav {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.booking-form__nav span {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--extra-light);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.booking-form__nav span.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.booking-form__group {
+    position: relative;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.booking-form__group span {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+}
+
+.booking-form__group label {
+    position: absolute;
+    top: 50%;
+    left: 2.5rem; /* Ajuste para el ícono */
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: var(--text-light);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    background-color: transparent; /* Fondo transparente */
+    padding: 0 5px;
+}
+
+.booking-form__group input:focus ~ label,
+.booking-form__group input:not(:placeholder-shown) ~ label,
+.booking-form__group select:focus ~ label,
+.booking-form__group select:not([value=""]) ~ label {
+    top: 0;
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    background-color: transparent; /* Fondo transparente */
+    transform: translateY(0);
+}
+
+.booking-form__group input,
+.booking-form__group select {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid var(--extra-light);
+    border-radius: 0.5rem;
+    background-color: var(--extra-light);
+    color: var(--text-dark);
+    outline: none;
+    transition: 0.3s;
+    padding-left: 2.5rem; /* Espacio para el ícono */
+}
+
+.booking-form__group input:focus,
+.booking-form__group select:focus {
+    border-color: var(--primary-color);
+    background-color: var(--white);
+}
+
+.booking-form__btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.booking-form__btn:hover {
+    background-color: var(--primary-color-dark);
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (width < 600px) {
+    .booking-form__container {
+        padding: 1rem;
+    }
+
+    .booking-form__group input,
+    .booking-form__group select {
+        padding: 0.5rem;
+        padding-left: 2rem; /* Ajuste para íconos en móviles */
+    }
+
+    .booking-form__group label {
+        left: 2rem; /* Ajuste para íconos en móviles */
+    }
+}
+/* Apartado de apoyo de viaje */
+.plan__container .subheader {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 600;
+    color: var(--text-dark);
+    letter-spacing: 5px;
+}
+
+.plan__container .section__header {
+    text-align: center;
+    font-size: 3rem;
+    line-height: 4rem;
+    margin-bottom: 1rem;
+}
+
+.plan__container .description {
+    text-align: center;
+    color: var(--text-light);
+}
+
+.plan__grid {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.plan__content .number {
+    display: inline-block;
+    padding: 5px 15px;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 2rem;
+}
+
+.plan__content .number:nth-child(4) {
+    background-color: #b0583b;
+}
+
+.plan__content .number:nth-child(7) {
+    background-color: #ffcca3;
+}
+
+.plan__content h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: .5rem;
+}
+
+.plan__content p {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.plan__image {
+    position: relative;
+}
+
+.plan__image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 10rem;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.plan__image img:nth-child(1) {
+    max-width: 250px;
+    transform: translate(calc(-50% - 9rem), calc(-50% + 5rem));
+    z-index: 3;
+}
+
+.plan__image img:nth-child(2) {
+    max-width: 260px;
+    transform: translate(-50%, calc(-50% + 5rem));
+    z-index: 2;
+}
+
+.plan__image img:nth-child(3) {
+    max-width: 230px;
+    transform: translate(calc(-50% + 9rem), calc(-50% + 5rem));
+}
+
+/* Apartado de Viaja para tener las mejores aventuras */
+.memories {
+    background-color: var(--extra-light);
+}
+
+.memories__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.memories__header .section__header {
+    max-width: 600px;
+}
+
+.memories__header .view__all {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    background: transparent;
+    white-space: nowrap;
+    outline: none;
+    border: 1px solid var(--text-light);
+    border-radius: 2rem;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.memories__grid {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+}
+
+.memories__card {
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 5rem;
+    background-color: var(--white);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.05);
+}
+
+.memories__card span {
+    display: inline-block;
+    padding: 20px 32px;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 100%;
+}
+
+.memories__card:nth-child(2) span {
+    background-color: #e98b6d;
+}
+
+.memories__card:nth-child(3) span {
+    background-color: #ffcca3;
+}
+
+.memories__card h4 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.memories__card p {
+    color: var(--text-light);
+    line-height: 1.75rem;
+}
+
+/* Apartado Espacios seguros */
+.lounge__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.lounge__grid {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.lounge__image {
+    position: relative;
+}
+
+.lounge__image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 20rem;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.lounge__image img:nth-child(1) {
+    max-width: 300px;
+    transform: translate(calc(-50% - 3rem), -50%);
+}
+
+.lounge__image img:nth-child(2) {
+    max-width: 200px;
+    transform: translate(calc(-50% + 6rem), calc(-50% + 7rem));
+}
+
+.lounge__details h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.lounge__details p {
+    color: var(--text-light);
+}
+
+/* Apartado Mejores viajes */
+/* Estilos para la sección de mejores viajes */
+.travellers__container {
+    padding: 5rem 1rem;
+    background-color: var(--extra-light);
+}
+
+.travellers__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta el ancho mínimo */
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Estilos para cada tarjeta */
+.travellers__card {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    aspect-ratio: 3 / 4; /* Relación de aspecto alargada (3:4) */
+}
+
+.travellers__card:hover {
+    transform: scale(1.05);
+}
+
+/* Imagen de la tarjeta */
+.travellers__card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Contenido superpuesto */
+.travellers__card__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(85, 83, 114, 0.361); /* Fondo semitransparente */
+    backdrop-filter: blur(5px); /* Efecto de desenfoque */
+
+    color: var(--white);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.travellers__card__content h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.travellers__card__content p {
+    font-size: 1rem;
+    color: var(--extra-light);
+    margin: 0;
+}
+
+/* Media Queries para responsividad */
+@media (width < 900px) {
+    .travellers__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (width < 600px) {
+    .travellers__grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+/* Footer */
+.footer {
+    background-color: var(--primary-color);
+}
+
+.footer__container {
+    display: grid;
+    grid-template-columns: 2fr repeat(2, 1fr);
+    gap: 5rem;
+}
+
+.footer__col h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.footer__col h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.footer__col p {
+    color: var(--extra-light);
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.footer__col p:hover {
+    color: var(--white);
+}
+
+.footer__bar {
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border-top: 1px solid var(--extra-light);
+}
+
+.footer__bar p {
+    font-size: 0.9rem;
+    color: var(--extra-light);
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.socials span {
+    font-size: 1.2rem;
+    color: var(--extra-light);
+}
+
+/* Media Queries */
+@media (width < 1200px) {
+    .section_container.header__container,
+    .section_container.plan__container,
+    .section_container.lounge__container {
+        overflow: hidden;
+    }
+
+    .memories__grid {
+        gap: 3rem;
+    }
+}
+
+@media (width < 900px) {
+    nav .btn {
+        display: none;
+    }
+
+    .header__container img {
+        min-width: 900px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .booking__container form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .plan__grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .plan__image {
+        min-height: 600px;
+        grid-area: 1/1/2/2;
+    }
+
+    .memories__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .lounge__container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .lounge__image {
+        min-height: 600px;
+    }
+
+    .travellers__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer__container {
+        gap: 2rem;
+    }
+}
+
+@media (width < 600px) {
+    .nav_links {
+        display: none;
+    }
+
+    .booking__nav span {
+        padding: 1rem .5rem;
+    }
+
+    .booking__container form {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .memories__header {
+        flex-direction: column;
+    }
+
+    .memories__grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .lounge__grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .travellers__grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer__container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer__bar {
+        flex-direction: column;
+        text-align: center;
+    }
+}
